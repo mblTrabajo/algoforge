@@ -58,6 +58,23 @@
     a button:hover {
       background-color: #008ecc;
     }
+
+    /* 🐾 Mascota flotante */
+    .mascota {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 140px;
+      z-index: 10;
+      opacity: 0.95;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -88,6 +105,8 @@
       <button>🚀 Ver en GitHub</button>
     </a>
   </div>
+
+  <!-- 🐾 Mascota flotante -->
+  <img src="mascota.png" alt="Mascota AlgoForge" class="mascota" />
 </body>
 </html>
-
