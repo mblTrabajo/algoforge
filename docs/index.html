@@ -14,36 +14,37 @@
       color: #e6e6e6;
       text-align: center;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
       padding: 40px 20px;
     }
 
     h1 {
       font-size: 2.5rem;
       color: #00ffc8;
-      margin-bottom: 10px;
     }
 
     p {
       font-size: 1.1rem;
       color: #ccc;
-      margin-bottom: 40px;
     }
 
     .section {
       max-width: 800px;
-      margin-bottom: 60px;
+      margin: 40px auto;
       padding: 20px;
       background-color: #1e1e1e;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 255, 200, 0.1);
     }
 
-    .section h2 {
-      color: #00ccff;
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      font-size: 14px;
+      background-color: #00ccff;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     ul {
@@ -58,49 +59,33 @@
 
     a {
       text-decoration: none;
-      color: #00ccff;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #00e6ff;
-    }
-
-    .button-link {
-      display: inline-block;
-      background-color: #00ccff;
-      color: #000;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .button-link:hover {
-      background-color: #00e6ff;
-      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>🚀 AlgoForge</h1>
-  <p>Automated Algorithm Lab for the Decentralized Future</p>
+  <h1 id="title">🚀 AlgoForge</h1>
+  <p id="subtitle">Automated Algorithm Lab for the Decentralized Future</p>
+
+  <div>
+    🌐 <strong>Cambiar idioma:</strong><br />
+    <button onclick="setLang('es')">🇪🇸 Español</button>
+    <button onclick="setLang('en')">🇬🇧 Inglés</button>
+    <button onclick="setLang('zh')">🇨🇳 中文</button>
+    <button onclick="setLang('fr')">🇫🇷 Français</button>
+    <button onclick="setLang('de')">🇩🇪 Deutsch</button>
+  </div>
 
   <div class="section">
-    <h2>🔧 ¿Qué es AlgoForge?</h2>
-    <p>
-      Plataforma descentralizada con 15 bots de trading.<br />
-      Fácil, pasiva y segura.<br />
+    <h2 id="what-title">🔧 ¿Qué es AlgoForge?</h2>
+    <p id="what-desc">
+      Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />
       Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.
     </p>
   </div>
 
   <div class="section">
-    <h2>📅 Roadmap Inicial</h2>
-    <ul>
+    <h2 id="roadmap-title">📅 Roadmap Inicial</h2>
+    <ul id="roadmap-list">
       <li>✅ Fase A: Página pública, GitHub y hosting</li>
       <li>🔜 Fase B: Creación del token $FORGE</li>
       <li>🔜 Fase C: Acceso por wallet y niveles</li>
@@ -109,9 +94,30 @@
   </div>
 
   <div class="section">
-    <h2>📎 Recursos</h2>
-    <p>Revisá nuestro repositorio con el avance del proyecto:</p>
-    <a class="button-link" href="https://github.com/mblTrabajo/algoforge" target="_blank">🚀 Ver en GitHub</a>
+    <h2 id="resources-title">📎 Recursos</h2>
+    <p id="resources-desc">Revisá nuestro repositorio con el avance del proyecto:</p>
+    <a href="https://github.com/mblTrabajo/algoforge" target="_blank">
+      <button>🚀 Ver en GitHub</button>
+    </a>
   </div>
-</body>
-</html>
+
+  <script>
+    const texts = {
+      es: {
+        title: "🚀 AlgoForge",
+        subtitle: "Laboratorio Algorítmico Automatizado para el Futuro Descentralizado",
+        whatTitle: "🔧 ¿Qué es AlgoForge?",
+        whatDesc: "Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.\nAcceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.",
+        roadmapTitle: "📅 Roadmap Inicial",
+        roadmapList: [
+          "✅ Fase A: Página pública, GitHub y hosting",
+          "🔜 Fase B: Creación del token $FORGE",
+          "🔜 Fase C: Acceso por wallet y niveles",
+          "🔜 Fase D: Bots activos con estadísticas reales"
+        ],
+        resourcesTitle: "📎 Recursos",
+        resourcesDesc: "Revisá nuestro repositorio con el avance del proyecto:"
+      },
+      en: {
+        title: "🚀 AlgoForge",
+        subtitle: "Automated Algorithm Lab for the Decentralized Future",
