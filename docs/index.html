@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -128,9 +127,85 @@
       <button>🚀 Ver en GitHub</button>
     </a>
   </div>
-
-<script src="https://cdn.jsdelivr.net/gh/openai/code-snippets@main/algoforge-lang.js"></script>
 <script>
+  const texts = {
+    es: {
+      title: "🚀 AlgoForge",
+      subtitle: "Laboratorio Algorítmico Automatizado para el Futuro Descentralizado",
+      whatTitle: "🔧 ¿Qué es AlgoForge?",
+      whatDesc: "Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.",
+      roadmapTitle: "📅 Roadmap Inicial",
+      roadmapList: [
+        "✅ Fase A: Página pública, GitHub y hosting",
+        "🔜 Fase B: Creación del token $FORGE",
+        "🔜 Fase C: Acceso por wallet y niveles",
+        "🔜 Fase D: Bots activos con estadísticas reales"
+      ],
+      resourcesTitle: "📎 Recursos",
+      resourcesDesc: "Revisá nuestro repositorio con el avance del proyecto:"
+    },
+    en: {
+      title: "🚀 AlgoForge",
+      subtitle: "Automated Algorithm Lab for the Decentralized Future",
+      whatTitle: "🔧 What is AlgoForge?",
+      whatDesc: "A decentralized platform with 15 trading bots. Easy, passive, and secure.<br />Access with $FORGE token. The more you hold, the higher your level and benefits.",
+      roadmapTitle: "📅 Initial Roadmap",
+      roadmapList: [
+        "✅ Phase A: Public page, GitHub and hosting",
+        "🔜 Phase B: Token $FORGE creation",
+        "🔜 Phase C: Wallet access and levels",
+        "🔜 Phase D: Bots with real statistics"
+      ],
+      resourcesTitle: "📎 Resources",
+      resourcesDesc: "Check out our GitHub repository for updates:"
+    },
+    zh: {
+      title: "🚀 AlgoForge",
+      subtitle: "去中心化未来的自动算法实验室",
+      whatTitle: "🔧 什么是AlgoForge？",
+      whatDesc: "一个包含15个交易机器人的去中心化平台。简单、被动、安全。<br />使用$FORGE代币访问，持有越多，等级和福利越高。",
+      roadmapTitle: "📅 初始路线图",
+      roadmapList: [
+        "✅ 阶段A：公共页面，GitHub和托管",
+        "🔜 阶段B：创建$FORGE代币",
+        "🔜 阶段C：钱包访问和等级",
+        "🔜 阶段D：具有真实统计数据的机器人"
+      ],
+      resourcesTitle: "📎 资源",
+      resourcesDesc: "查看我们的GitHub仓库以获取更新："
+    },
+    fr: {
+      title: "🚀 AlgoForge",
+      subtitle: "Laboratoire d'algorithmes automatisés pour un futur décentralisé",
+      whatTitle: "🔧 Qu'est-ce qu'AlgoForge ?",
+      whatDesc: "Plateforme décentralisée avec 15 bots de trading. Facile, passive et sécurisée.<br />Accès avec le jeton $FORGE. Plus vous en avez, plus vos avantages sont élevés.",
+      roadmapTitle: "📅 Feuille de route initiale",
+      roadmapList: [
+        "✅ Phase A : Page publique, GitHub et hébergement",
+        "🔜 Phase B : Création du token $FORGE",
+        "🔜 Phase C : Accès par wallet et niveaux",
+        "🔜 Phase D : Bots actifs avec statistiques réelles"
+      ],
+      resourcesTitle: "📎 Ressources",
+      resourcesDesc: "Consultez notre dépôt GitHub pour les mises à jour :"
+    },
+    de: {
+      title: "🚀 AlgoForge",
+      subtitle: "Automatisiertes Algorithmus-Labor für die dezentrale Zukunft",
+      whatTitle: "🔧 Was ist AlgoForge?",
+      whatDesc: "Eine dezentrale Plattform mit 15 Trading-Bots. Einfach, passiv und sicher.<br />Zugang über den $FORGE-Token. Je mehr du hast, desto höher dein Level und deine Vorteile.",
+      roadmapTitle: "📅 Roadmap",
+      roadmapList: [
+        "✅ Phase A: Öffentliche Seite, GitHub und Hosting",
+        "🔜 Phase B: Erstellung des $FORGE Tokens",
+        "🔜 Phase C: Wallet-Zugriff und Stufen",
+        "🔜 Phase D: Bots mit echten Statistiken"
+      ],
+      resourcesTitle: "📎 Ressourcen",
+      resourcesDesc: "Besuche unser GitHub-Repository für Updates:"
+    }
+  };
+
   const currentLangLabel = {
     es: "🇪🇸 Español", en: "🇬🇧 English", zh: "🇨🇳 中文",
     fr: "🇫🇷 Français", de: "🇩🇪 Deutsch"
@@ -161,7 +236,7 @@
     menu.style.display = menu.style.display === "block" ? "none" : "block";
   }
 
-  setLang('es'); // idioma inicial
+  setLang('es');
 </script>
 </body>
 </html>
