@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -59,21 +60,29 @@
       background-color: #008ecc;
     }
 
-    /* 🐾 Mascota flotante */
-    .mascota {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 140px;
-      z-index: 10;
-      opacity: 0.95;
-      animation: float 4s ease-in-out infinite;
+    /* Barra de progreso estilo neon */
+    .progress-container {
+      margin-top: 20px;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+    .progress-bar {
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 25px;
+      margin-bottom: 20px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00e6ff, #00aaff);
+      width: 0%;
+      text-align: left;
+      color: white;
+      padding-left: 10px;
+      line-height: 25px;
+      font-size: 14px;
+      transition: width 1s ease-in-out;
     }
   </style>
 </head>
@@ -82,20 +91,22 @@
 
   <div class="section">
     <h2>🔧 ¿Qué es AlgoForge?</h2>
-    <p>
-      Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />
-      Acceso mediante el token $FORGE. Cuantos más tokens tengas, mayor tu nivel.
+    <p style="text-align: justify;">
+      Algoforge es una plataforma de desarrollo de algoritmos y soluciones inteligentes orientada a la innovación tecnológica.
+      Nos especializamos en crear herramientas basadas en inteligencia artificial, automatización y análisis de datos,
+      que permiten a empresas y desarrolladores optimizar procesos, tomar decisiones informadas y escalar sus soluciones de manera eficiente.
+      En Algoforge, convertimos ideas complejas en tecnología accesible y de alto impacto.
     </p>
   </div>
 
   <div class="section">
-    <h2>📅 Roadmap Inicial</h2>
-    <ul>
-      <li>✅ Fase A: Página pública, GitHub y hosting</li>
-      <li>🔜 Fase B: Creación del token $FORGE</li>
-      <li>🔜 Fase C: Acceso por wallet y niveles</li>
-      <li>🔜 Fase D: Bots activos con estadísticas reales</li>
-    </ul>
+    <h2>📅 Roadmap Progresivo</h2>
+    <div class="progress-container">
+      <div class="progress-bar"><div class="progress-fill" style="width: 100%;">Fase A: Página pública, GitHub y hosting</div></div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 70%;">Fase B: Creación del token $FORGE</div></div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 40%;">Fase C: Acceso por wallet y niveles</div></div>
+      <div class="progress-bar"><div class="progress-fill" style="width: 10%;">Fase D: Bots activos con estadísticas reales</div></div>
+    </div>
   </div>
 
   <div class="section">
@@ -105,8 +116,5 @@
       <button>🚀 Ver en GitHub</button>
     </a>
   </div>
-
-  <!-- 🐾 Mascota flotante -->
-  <img src="mascota.png" alt="Mascota AlgoForge" class="mascota" />
 </body>
 </html>
