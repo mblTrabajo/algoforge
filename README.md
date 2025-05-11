@@ -2,38 +2,62 @@
 
 **Automated Algorithm Lab for the Decentralized Future**
 
----
-
-## 🔧 ¿Qué es AlgoForge?
-
-AlgoForge es una plataforma descentralizada que permite a los usuarios operar con bots algorítmicos financieros de forma **pasiva, segura y sin conocimientos técnicos**.
-
-El acceso se realiza mediante el token $FORGE. Cuantos más tokens tenés, mayor es tu nivel dentro de la plataforma (Bronce, Plata, Oro, Pro).
+![AlgoForge Banner](https://img.shields.io/badge/Blockchain-Web3-blue?style=flat-square) ![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow?style=flat-square)
 
 ---
 
-## 🌐 Web del Proyecto
+## 🧠 ¿Qué es AlgoForge?
 
-👉 [https://mbltrabajo.github.io/algoforge/](https://mbltrabajo.github.io/algoforge/)
+**AlgoForge** es una plataforma descentralizada que permite operar con **bots algorítmicos de trading** de forma **pasiva, segura y sin conocimientos técnicos**.
+
+> 🎯 Cuantos más tokens $FORGE tengas, mayor es tu nivel y tus beneficios (Bronce, Plata, Oro, Pro).
 
 ---
 
-## 📅 Roadmap (Plan de trabajo)
+## 🌐 Página del Proyecto
 
-- ✅ Fase A: Página pública, GitHub y hosting
-- 🔜 Fase B: Creación del token $FORGE
-- 🔜 Fase C: Acceso con wallet y niveles por token
-- 🔜 Fase D: Bots reales con estadísticas
-- 🔜 Fase E: Tokenomics y quema de comisiones
+🎉 **Sitio Web Online:**  
+[![Visitar AlgoForge](https://img.shields.io/badge/🌍%20Ir%20a%20la%20Web-%20Click%20Aquí%20💻-brightgreen?style=for-the-badge)](https://mbltrabajo.github.io/algoforge/)
+
+---
+
+## 🛠 Tecnologías en uso
+
+- 🧩 HTML + CSS (GitHub Pages)
+- 🧠 Web3 y contratos inteligentes (próximamente)
+- 🔗 GitHub para control de versiones
+- ☁️ Hospedado con GitHub Pages
+
+---
+
+## 🗺 Roadmap (Plan de Trabajo)
+
+| Fase | Descripción | Estado |
+|------|-------------|--------|
+| A | Página pública y estructura del proyecto | ✅ Completado |
+| B | Creación del token $FORGE (testnet) | 🔜 Próximo paso |
+| C | Acceso con wallet y niveles por token | 🔜 |
+| D | Activación de bots con estadísticas | 🔜 |
+| E | Tokenomics + quema por comisiones | 🔜 |
+
+---
+
+## 📦 Estructura del Proyecto
+
 
 ---
 
 ## 📌 Estado actual
 
-Proyecto en fase de desarrollo inicial. Se está documentando todo el avance paso por paso con código abierto.
+🟢 Proyecto en fase de desarrollo inicial  
+📚 Documentación y diseño Web en curso  
+🔥 Construyendo paso a paso en público
 
 ---
 
-## 🤝 Contacto y comunidad
+## 🤝 Comunidad y contacto
 
-(En el futuro: Discord, X, etc.)
+Próximamente:  
+[🟦 Discord] • [🐦 Twitter/X] • [📬 Telegram]
+
+¿Te interesa colaborar o crear un bot? ¡Abrí un issue o fork! 😉
