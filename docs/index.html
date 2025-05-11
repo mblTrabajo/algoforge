@@ -8,6 +8,20 @@
 <title>AlgoForge — AlgorithmicBot</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap" rel="stylesheet"/>
 <style>
+  /* Oculta la barra flotante de Google Translate */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
+/* También oculta el logotipo de Google y otros elementos */
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
     body {
       margin: 0;
       padding: 0;
@@ -147,8 +161,6 @@
 </select>
 </div>
 </div>
-
-
 <h1>AlgoForge</h1>
 <div class="section">
 <h2>✦ What is AlgoForge?</h2>
@@ -158,15 +170,34 @@
       At AlgoForge, we transform complex ideas into accessible, high-impact technology.
     </p>
 </div>
+
 <div class="section">
-<h2>✦ Roadmap</h2>
-<div class="progress-container">
-<div class="progress-bar"><div class="progress-fill" data-width="100%">Phase A: Public page, GitHub and hosting</div></div>
-<div class="progress-bar"><div class="progress-fill" data-width="80%">Phase B: Token creation $$$</div></div>
-<div class="progress-bar"><div class="progress-fill" data-width="50%">Phase C: Wallet access + tier system</div></div>
-<div class="progress-bar"><div class="progress-fill" data-width="30%">Phase D: Bot launch</div></div>
+<h2>Countdown to Next Milestone</h2>
+<div style="background-color:#e0f7ff; border:2px solid #00e6ff; border-radius:16px; box-shadow:0 0 25px rgba(0,230,255,0.4); padding:40px 60px; text-align:center;">
+<div id="timer" style="font-size:48px; color:#00aaff; letter-spacing:6px; font-weight:bold;">00:00:00:00</div>
 </div>
 </div>
+<script>
+  const targetDate = new Date("2024-06-01T00:01:00").getTime();
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById("timer").innerHTML =
+      (days < 10 ? "0" + days : days) + ":" +
+      (hours < 10 ? "0" + hours : hours) + ":" +
+      (minutes < 10 ? "0" + minutes : minutes) + ":" +
+      (seconds < 10 ? "0" + seconds : seconds);
+    if (distance < 0) {
+      document.getElementById("timer").innerHTML = "00:00:00:00";
+    }
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 <div class="section" id="technology">
 <h2>✦ Technology - Algorithmic Strategies Overview</h2>
 <p>Below is a summary of the 15 planned trading algorithms with estimated annual ROI projections:</p>
@@ -297,7 +328,6 @@
     }
   </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-
 <style>
   .top-bar {
     position: fixed;
