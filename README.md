@@ -6,6 +6,22 @@
 
 ---
 
+## 🌐 Cambiar idioma | Change Language | Cambiar idioma 🌍
+
+| 🌍 Idioma | Enlace |
+|----------|--------|
+| 🇺🇸 English | [English Version](#) |
+| 🇪🇸 Español | [Versión en Español](#) |
+| 🇧🇷 Português | [Versão em Português](#) |
+| 🇫🇷 Français | [Version Française](#) |
+| 🇩🇪 Deutsch | [Deutsche Version](#) |
+| 🇮🇹 Italiano | [Versione Italiana](#) |
+| 🇨🇳 中文 | [中文版](#) |
+
+> (Por ahora son solo referencias. Más adelante se pueden crear versiones reales en carpetas `README.en.md`, `README.pt.md`, etc.)
+
+---
+
 ## 🧠 ¿Qué es AlgoForge?
 
 **AlgoForge** es una plataforma descentralizada que permite operar con **bots algorítmicos de trading** de forma **pasiva, segura y sin conocimientos técnicos**.
@@ -21,12 +37,12 @@
 
 ---
 
-## 🛠 Tecnologías en uso
+## 🧩 Tecnologías en uso
 
-- 🧩 HTML + CSS (GitHub Pages)
-- 🧠 Web3 y contratos inteligentes (próximamente)
-- 🔗 GitHub para control de versiones
-- ☁️ Hospedado con GitHub Pages
+- HTML + CSS (GitHub Pages)
+- Web3 / Solidity (en desarrollo)
+- Git + GitHub para control de versiones
+- Hospedado en GitHub Pages
 
 ---
 
@@ -42,8 +58,16 @@
 
 ---
 
-## 📦 Estructura del Proyecto
+## 👨‍💻 Equipo
 
+| Nombre | Rol | Contacto |
+|--------|-----|----------|
+| MBLTrabajo | Fundador & Desarrollador Principal | [GitHub](https://github.com/mblTrabajo) |
+| + Tu nombre o colaboradores futuros | Contributor | — |
+
+---
+
+## 🤝
 
 ---
 
@@ -55,9 +79,9 @@
 
 ---
 
-## 🤝 Comunidad y contacto
+## 📣 Comunidad y contacto
 
-Próximamente:  
-[🟦 Discord] • [🐦 Twitter/X] • [📬 Telegram]
-
-¿Te interesa colaborar o crear un bot? ¡Abrí un issue o fork! 😉
+Próximamente:
+- 🟦 Discord
+- 🐦 Twitter/X
+- 📬 Telegram
