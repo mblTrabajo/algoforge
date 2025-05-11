@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoForge — Bots Algorítmicos Descentralizados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  background: url('background-tron.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative;
+}
+
+
+    body::before, body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(to bottom,
+        #99ccff, #66b2ff, #3399ff, #1a75ff, #004080, #e0e0e0
+      );
+      z-index: 0;
+      opacity: 0.25;
+      animation: scroll-glow 10s linear infinite;
+    }
+
+    body::before { left: 0; }
+    body::after { right: 0; }
+
+    @keyframes scroll-glow {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 100%; }
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00ffc8;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .section {
+      background-color: #1e1e1e;
+      color: #e6e6e6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    img.logo {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .lang-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #00ccff;
+      color: black;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .lang-menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #1a1a1a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .lang-menu button {
+      display: block;
+      margin: 5px 0;
+      background: none;
+      color: #eee;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-menu button:hover {
+      color: #00e6ff;
+    }
+  </style>
+</head>
+<body>
+  <button class="lang-button" onclick="toggleLangMenu()">🌐 <span id="current-lang">Idioma</span></button>
+  <div class="lang-menu" id="lang-menu">
+    <button onclick="setLang('es')">🇪🇸 Español</button>
+    <button onclick="setLang('en')">🇬🇧 English</button>
+    <button onclick="setLang('zh')">🇨🇳 中文</button>
+    <button onclick="setLang('fr')">🇫🇷 Français</button>
+    <button onclick="setLang('de')">🇩🇪 Deutsch</button>
+  </div>
+  <main>
+    <img src="logo.png" alt="AlgoForge Logo" class="logo" />
+    <h1 id="title">AlgoForge</h1>
+    <p id="subtitle">Automated Algorithm Lab for the Decentralized Future</p>
+
+    <div class="section">
+      <h2 id="what-title">🔧 ¿Qué es AlgoForge?</h2>
+      <p id="what-desc">Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.</p>
+    </div>
+
+    <div class="section">
+      <h2 id="roadmap-title">📅 Roadmap Inicial</h2>
+      <ul id="roadmap-list">
+        <li>✅ Fase A: Página pública, GitHub y hosting</li>
+        <li>🔜 Fase B: Creación del token $FORGE</li>
+        <li>🔜 Fase C: Acceso por wallet y niveles</li>
+        <li>🔜 Fase D: Bots activos con estadísticas reales</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 id="resources-title">📎 Recursos</h2>
+      <p id="resources-desc">Revisá nuestro repositorio con el avance del proyecto:</p>
+      <a href="https://github.com/mblTrabajo/algoforge" target="_blank">
+        <button>🚀 Ver en GitHub</button>
+      </a>
+    </div>
+  </main>
+  <script>
+    const texts = {
+      es: {
+        title: "AlgoForge",
+        subtitle: "Laboratorio Algorítmico Automatizado para el Futuro Descentralizado",
+        whatTitle: "🔧 ¿Qué es AlgoForge?",
+        whatDesc: "Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.",
+        roadmapTitle: "📅 Roadmap Inicial",
+        roadmapList: [
+          "✅ Fase A: Página pública, GitHub y hosting",
+          "🔜 Fase B: Creación del token $FORGE",
+          "🔜 Fase C: Acceso por wallet y niveles",
+          "🔜 Fase D: Bots activos con estadísticas reales"
+        ],
+        resourcesTitle: "📎 Recursos",
+        resourcesDesc: "Revisá nuestro repositorio con el avance del proyecto:"
+      },
+      en: {
+        title: "AlgoForge",
+        subtitle: "Automated Algorithm Lab for the Decentralized Future",
+        whatTitle: "🔧 What is AlgoForge?",
+        whatDesc: "A decentralized platform with 15 trading bots. Easy, passive, and secure.<br />Access with $FORGE token. The more you hold, the higher your level and benefits.",
+        roadmapTitle: "📅 Initial Roadmap",
+        roadmapList: [
+          "✅ Phase A: Public page, GitHub and hosting",
+          "🔜 Phase B: Token $FORGE creation",
+          "🔜 Phase C: Wallet access and levels",
+          "🔜 Phase D: Bots with real statistics"
+        ],
+        resourcesTitle: "📎 Resources",
+        resourcesDesc: "Check our repository for progress:"
+      },
+      zh: {
+        title: "AlgoForge",
+        subtitle: "去中心化未来的自动算法实验室",
+        whatTitle: "🔧 什么是AlgoForge？",
+        whatDesc: "一个包含15个交易机器人的去中心化平台。简单、被动、安全。<br />使用$FORGE代币访问，持有越多，等级和福利越高。",
+        roadmapTitle: "📅 初始路线图",
+        roadmapList: [
+          "✅ 阶段A：公共页面，GitHub和托管",
+          "🔜 阶段B：创建$FORGE代币",
+          "🔜 阶段C：钱包访问和等级",
+          "🔜 阶段D：具有真实统计数据的机器人"
+        ],
+        resourcesTitle: "📎 资源",
+        resourcesDesc: "查看我们GitHub仓库的最新进展："
+      },
+      fr: {
+        title: "AlgoForge",
+        subtitle: "Laboratoire d'algorithmes automatisés pour un futur décentralisé",
+        whatTitle: "🔧 Qu'est-ce qu'AlgoForge ?",
+        whatDesc: "Plateforme décentralisée avec 15 bots de trading. Facile, passive et sécurisée.<br />Accès avec le jeton $FORGE. Plus vous en avez, plus vos avantages sont élevés.",
+        roadmapTitle: "📅 Feuille de route initiale",
+        roadmapList: [
+          "✅ Phase A : Page publique, GitHub et hébergement",
+          "🔜 Phase B : Création du token $FORGE",
+          "🔜 Phase C : Accès via portefeuille et niveaux",
+          "🔜 Phase D : Bots actifs avec statistiques"
+        ],
+        resourcesTitle: "📎 Ressources",
+        resourcesDesc: "Consultez notre dépôt GitHub pour suivre les progrès :"
+      },
+      de: {
+        title: "AlgoForge",
+        subtitle: "Automatisiertes Algorithmus-Labor für die dezentrale Zukunft",
+        whatTitle: "🔧 Was ist AlgoForge?",
+        whatDesc: "Eine dezentrale Plattform mit 15 Trading-Bots. Einfach, passiv und sicher.<br />Zugang mit dem $FORGE-Token. Je mehr du hältst, desto höher dein Level und deine Vorteile.",
+        roadmapTitle: "📅 Erste Roadmap",
+        roadmapList: [
+          "✅ Phase A: Öffentliche Seite, GitHub und Hosting",
+          "🔜 Phase B: Erstellung des $FORGE Tokens",
+          "🔜 Phase C: Wallet-Zugang und Stufen",
+          "🔜 Phase D: Aktive Bots mit Statistiken"
+        ],
+        resourcesTitle: "📎 Ressourcen",
+        resourcesDesc: "Schau dir unser GitHub-Repository für Fortschritte an:"
+      }
+    };
+
+    const currentLangLabel = {
+      es: "🇪🇸 Español", en: "🇬🇧 English", zh: "🇨🇳 中文", fr: "🇫🇷 Français", de: "🇩🇪 Deutsch"
+    };
+
+    function setLang(lang) {
+      const t = texts[lang];
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+      document.getElementById("what-title").textContent = t.whatTitle;
+      document.getElementById("what-desc").innerHTML = t.whatDesc;
+      document.getElementById("roadmap-title").textContent = t.roadmapTitle;
+      const roadmapList = document.getElementById("roadmap-list");
+      roadmapList.innerHTML = "";
+      t.roadmapList.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        roadmapList.appendChild(li);
+      });
+      document.getElementById("resources-title").textContent = t.resourcesTitle;
+      document.getElementById("resources-desc").textContent = t.resourcesDesc;
+      document.getElementById("lang-menu").style.display = "none";
+      document.getElementById("current-lang").textContent = currentLangLabel[lang];
+    }
+
+    function toggleLangMenu() {
+      const menu = document.getElementById("lang-menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    setLang('es');
+  </script>
+</body>
+</html>
