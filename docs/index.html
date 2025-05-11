@@ -16,6 +16,8 @@
       text-align: center;
       min-height: 100vh;
       padding: 60px 20px;
+      cursor: none;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -60,7 +62,6 @@
       background-color: #008ecc;
     }
 
-    /* Barra de progreso estilo neon */
     .progress-container {
       margin-top: 20px;
     }
@@ -82,7 +83,39 @@
       padding-left: 10px;
       line-height: 25px;
       font-size: 14px;
-      transition: width 1s ease-in-out;
+    }
+
+    /* Cursor personalizado */
+    .cursor-dot {
+      position: fixed;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #00aaff;
+      box-shadow: 0 0 8px #00e6ff, 0 0 20px #00ccee;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+    }
+
+    .trail {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      pointer-events: none;
+      background: radial-gradient(circle, #00e6ff 0%, #00aaff 100%);
+      box-shadow: 0 0 12px #00ccff, 0 0 20px #00aaff;
+      opacity: 0.8;
+      animation: fadeOut 1s forwards;
+      z-index: 9998;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(0.5);
+      }
     }
   </style>
 </head>
@@ -90,7 +123,7 @@
   <h1>AlgoForge</h1>
 
   <div class="section">
-    <h2>🔧 ¿Qué es AlgoForge?</h2>
+    <h2>✦ ¿Qué es AlgoForge?</h2>
     <p style="text-align: justify;">
       Algoforge es una plataforma de desarrollo de algoritmos y soluciones inteligentes orientada a la innovación tecnológica.
       Nos especializamos en crear herramientas basadas en inteligencia artificial, automatización y análisis de datos,
@@ -100,21 +133,61 @@
   </div>
 
   <div class="section">
-    <h2>📅 Roadmap Progresivo</h2>
+    <h2>✦ Roadmap</h2>
     <div class="progress-container">
-      <div class="progress-bar"><div class="progress-fill" style="width: 100%;">Fase A: Página pública, GitHub y hosting</div></div>
-      <div class="progress-bar"><div class="progress-fill" style="width: 70%;">Fase B: Creación del token $FORGE</div></div>
-      <div class="progress-bar"><div class="progress-fill" style="width: 40%;">Fase C: Acceso por wallet y niveles</div></div>
-      <div class="progress-bar"><div class="progress-fill" style="width: 10%;">Fase D: Bots activos con estadísticas reales</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="100%">Fase A: Página pública, GitHub y hosting</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="70%">Fase B: Creación del token $FORGE</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="40%">Fase C: Acceso por wallet y niveles</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="30%">Fase D: Lanzamiento del bot</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>📎 Recursos</h2>
+    <h2>✦ Recursos</h2>
     <p>Explorá nuestro repositorio para seguir el avance del proyecto:</p>
     <a href="https://github.com/mblTrabajo/algoforge" target="_blank">
-      <button>🚀 Ver en GitHub</button>
+      <button>Ver en GitHub</button>
     </a>
   </div>
+
+  <!-- Cursor visual -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <script>
+    // Barras animadas
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.progress-fill').forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.transition = 'width 2s ease-in-out';
+        bar.style.width = width;
+      });
+    });
+
+    // Cursor personalizado
+    const cursor = document.getElementById("cursorDot");
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+
+      const trail = document.createElement("div");
+      trail.className = "trail";
+      trail.style.left = e.pageX + "px";
+      trail.style.top = e.pageY + "px";
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1000);
+    });
+  
+    // Cambio de color al hacer clic
+    document.addEventListener("mousedown", () => {
+      cursor.style.background = "#ff00cc";
+      cursor.style.boxShadow = "0 0 10px #ff66ff, 0 0 25px #ff00cc";
+    });
+
+    document.addEventListener("mouseup", () => {
+      cursor.style.background = "#00aaff";
+      cursor.style.boxShadow = "0 0 8px #00e6ff, 0 0 20px #00ccee";
+    });
+    
+</script>
 </body>
 </html>
