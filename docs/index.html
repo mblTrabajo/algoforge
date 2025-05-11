@@ -15,8 +15,6 @@
       text-align: center;
       min-height: 100vh;
       padding: 60px 20px;
-      cursor: none;
-      overflow-x: hidden;
     }
 
     h1 {
@@ -61,66 +59,11 @@
       background-color: #008ecc;
     }
 
-    .progress-container {
-      margin-top: 20px;
-    }
-
-    .progress-bar {
-      background-color: #e0e0e0;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 25px;
-      margin-bottom: 20px;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #00e6ff, #00aaff);
-      width: 0%;
-      text-align: left;
-      color: white;
-      padding-left: 10px;
-      line-height: 25px;
-      font-size: 14px;
-    }
-
-    .cursor-dot {
-      position: fixed;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: #00aaff;
-      box-shadow: 0 0 8px #00e6ff, 0 0 20px #00ccee;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-    }
-
-    .trail {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      pointer-events: none;
-      background: radial-gradient(circle, #00e6ff 0%, #00aaff 100%);
-      box-shadow: 0 0 12px #00ccff, 0 0 20px #00aaff;
-      opacity: 0.8;
-      animation: fadeOut 1s forwards;
-      z-index: 9998;
-    }
-
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-    }
-
     .lang-selector {
       position: fixed;
       top: 20px;
       right: 20px;
-      z-index: 10000;
+      z-index: 1000;
     }
 
     #language-select {
@@ -134,21 +77,17 @@
       box-shadow: 0 0 10px #00ccee;
       cursor: pointer;
     }
-
-    #language-select:focus {
-      outline: none;
-    }
   </style>
 </head>
 <body>
-  <!-- Botón de idioma -->
+  <!-- Selector de idioma -->
   <div class="lang-selector">
-    <select id="language-select" onchange="changeLanguage()">
+    <select id="language-select" onchange="changeLang()">
       <option value="es">🇪🇸 Español</option>
       <option value="en">🇬🇧 English</option>
       <option value="fr">🇫🇷 Français</option>
       <option value="de">🇩🇪 Deutsch</option>
-      <option value="zh">🇨🇳 中文</option>
+      <option value="zh-CN">🇨🇳 中文</option>
       <option value="ar">🇸🇦 العربية</option>
     </select>
   </div>
@@ -164,14 +103,15 @@
       En Algoforge, convertimos ideas complejas en tecnología accesible y de alto impacto.
     </p>
   </div>
+
   <div class="section">
     <h2>✦ Roadmap</h2>
-    <div class="progress-container">
-      <div class="progress-bar"><div class="progress-fill" data-width="100%">Fase A: Página pública, GitHub y hosting</div></div>
-      <div class="progress-bar"><div class="progress-fill" data-width="70%">Fase B: Creación del token $$$</div></div>
-      <div class="progress-bar"><div class="progress-fill" data-width="40%">Fase C: Acceso por wallet y niveles</div></div>
-      <div class="progress-bar"><div class="progress-fill" data-width="30%">Fase D: Lanzamiento del bot</div></div>
-    </div>
+    <ul>
+      <li>Fase A: Página pública, GitHub y hosting</li>
+      <li>Fase B: Creación del token $$$</li>
+      <li>Fase C: Acceso por wallet y niveles</li>
+      <li>Fase D: Lanzamiento del bot</li>
+    </ul>
   </div>
 
   <div class="section">
@@ -181,139 +121,57 @@
       <button>Ver en GitHub</button>
     </a>
   </div>
+  <!-- Google Translate -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,en,fr,de,zh-CN,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
 
-  <div class="cursor-dot" id="cursorDot"></div>
-  <script>
-    // Barras animadas al cargar
-    window.addEventListener('load', () => {
-      document.querySelectorAll('.progress-fill').forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        bar.style.transition = 'width 2s ease-in-out';
-        bar.style.width = width;
-      });
-    });
-
-    // Cursor personalizado
-    const cursor = document.getElementById("cursorDot");
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
-
-      const trail = document.createElement("div");
-      trail.className = "trail";
-      trail.style.left = e.pageX + "px";
-      trail.style.top = e.pageY + "px";
-      document.body.appendChild(trail);
-      setTimeout(() => trail.remove(), 1000);
-    });
-
-    document.addEventListener("mousedown", () => {
-      cursor.style.background = "#ff00cc";
-      cursor.style.boxShadow = "0 0 10px #ff66ff, 0 0 25px #ff00cc";
-    });
-
-    document.addEventListener("mouseup", () => {
-      cursor.style.background = "#00aaff";
-      cursor.style.boxShadow = "0 0 8px #00e6ff, 0 0 20px #00ccee";
-    });
-
-    // Traducción completa
-    const fullTranslations = {
-      es: {
-        title: "AlgoForge",
-        section1: "¿Qué es AlgoForge?",
-        section2: "Roadmap",
-        section3: "Recursos",
-        description: "Algoforge es una plataforma de desarrollo de algoritmos y soluciones inteligentes orientada a la innovación tecnológica. Nos especializamos en crear herramientas basadas en inteligencia artificial, automatización y análisis de datos, que permiten a empresas y desarrolladores optimizar procesos, tomar decisiones informadas y escalar sus soluciones de manera eficiente. En Algoforge, convertimos ideas complejas en tecnología accesible y de alto impacto.",
-        roadmapA: "Fase A: Página pública, GitHub y hosting",
-        roadmapB: "Fase B: Creación del token $$$",
-        roadmapC: "Fase C: Acceso por wallet y niveles",
-        roadmapD: "Fase D: Lanzamiento del bot",
-        resourcesText: "Explorá nuestro repositorio para seguir el avance del proyecto:",
-        buttonText: "Ver en GitHub"
-      },
-      en: {
-        title: "AlgoForge",
-        section1: "What is AlgoForge?",
-        section2: "Roadmap",
-        section3: "Resources",
-        description: "Algoforge is a platform for developing intelligent algorithmic solutions focused on tech innovation. We specialize in tools based on artificial intelligence, automation, and data analysis, enabling companies and developers to optimize processes, make informed decisions, and scale efficiently. At AlgoForge, we turn complex ideas into accessible, high-impact technology.",
-        roadmapA: "Phase A: Public website, GitHub & hosting",
-        roadmapB: "Phase B: Creation of the $$$ token",
-        roadmapC: "Phase C: Wallet access & tier system",
-        roadmapD: "Phase D: Bot launch",
-        resourcesText: "Check our repository for updates:",
-        buttonText: "View on GitHub"
-      },
-      fr: {
-        title: "AlgoForge",
-        section1: "Qu'est-ce que AlgoForge?",
-        section2: "Feuille de route",
-        section3: "Ressources",
-        description: "Algoforge est une plateforme de développement d'algorithmes intelligents axée sur l'innovation technologique. Nous créons des outils basés sur l'IA, l'automatisation et l'analyse de données pour optimiser les processus, éclairer les décisions et faciliter la montée en charge. Nous transformons les idées complexes en technologie accessible et percutante.",
-        roadmapA: "Phase A : Site public, GitHub et hébergement",
-        roadmapB: "Phase B : Création du token $$$",
-        roadmapC: "Phase C : Accès par portefeuille et niveaux",
-        roadmapD: "Phase D : Lancement du bot",
-        resourcesText: "Consultez notre dépôt pour suivre les progrès :",
-        buttonText: "Voir sur GitHub"
-      },
-      de: {
-        title: "AlgoForge",
-        section1: "Was ist AlgoForge?",
-        section2: "Fahrplan",
-        section3: "Ressourcen",
-        description: "AlgoForge ist eine Plattform zur Entwicklung intelligenter algorithmischer Lösungen mit Schwerpunkt auf technologischer Innovation. Wir bieten Tools mit KI, Automatisierung und Datenanalyse, um Prozesse zu optimieren und informierte Entscheidungen zu treffen. Wir verwandeln komplexe Ideen in zugängliche Technologie mit großer Wirkung.",
-        roadmapA: "Phase A: Öffentliche Seite, GitHub & Hosting",
-        roadmapB: "Phase B: Erstellung des $$$ Tokens",
-        roadmapC: "Phase C: Zugang per Wallet & Stufen",
-        roadmapD: "Phase D: Bot-Start",
-        resourcesText: "Siehe unser Repository für Updates:",
-        buttonText: "Auf GitHub ansehen"
-      },
-      zh: {
-        title: "AlgoForge",
-        section1: "什么是 AlgoForge？",
-        section2: "路线图",
-        section3: "资源",
-        description: "AlgoForge 是一个致力于技术创新的智能算法开发平台。我们专注于人工智能、自动化和数据分析工具，帮助企业和开发人员优化流程、做出明智决策并高效扩展。在 AlgoForge，我们将复杂的想法转化为可访问且有影响力的技术。",
-        roadmapA: "阶段 A：公开网页、GitHub 和托管",
-        roadmapB: "阶段 B：创建 $$$ 代币",
-        roadmapC: "阶段 C：钱包接入与等级系统",
-        roadmapD: "阶段 D：启动机器人",
-        resourcesText: "查看我们的代码库以获取更新：",
-        buttonText: "查看 GitHub"
-      },
-      ar: {
-        title: "ألغوفورج",
-        section1: "ما هو ألغوفورج؟",
-        section2: "خارطة الطريق",
-        section3: "الموارد",
-        description: "ألغوفورج هي منصة لتطوير الخوارزميات الذكية والحلول التقنية المبتكرة. نحن نُبدع أدوات تعتمد على الذكاء الاصطناعي، والأتمتة، وتحليل البيانات، لتمكين الشركات والمطورين من تحسين العمليات واتخاذ قرارات فعّالة وتوسيع نطاق الحلول. نحول الأفكار المعقدة إلى تكنولوجيا مؤثرة وسهلة الاستخدام.",
-        roadmapA: "المرحلة A: موقع عام، GitHub والاستضافة",
-        roadmapB: "المرحلة B: إنشاء رمز $$$",
-        roadmapC: "المرحلة C: الوصول عبر المحفظة والمستويات",
-        roadmapD: "المرحلة D: إطلاق الروبوت",
-        resourcesText: "استعرض مستودعنا لمتابعة التقدم:",
-        buttonText: "عرض على GitHub"
-      }
-    };
-
-    function changeLanguage() {
+    function changeLang() {
       const lang = document.getElementById("language-select").value;
-      const t = fullTranslations[lang];
-      document.querySelector("h1").textContent = t.title;
-      document.querySelector(".section:nth-of-type(1) h2").textContent = "✦ " + t.section1;
-      document.querySelector(".section:nth-of-type(1) p").textContent = t.description;
-      document.querySelector(".section:nth-of-type(2) h2").textContent = "✦ " + t.section2;
-      document.querySelectorAll(".progress-fill")[0].textContent = t.roadmapA;
-      document.querySelectorAll(".progress-fill")[1].textContent = t.roadmapB;
-      document.querySelectorAll(".progress-fill")[2].textContent = t.roadmapC;
-      document.querySelectorAll(".progress-fill")[3].textContent = t.roadmapD;
-      document.querySelector(".section:nth-of-type(3) h2").textContent = "✦ " + t.section3;
-      document.querySelector(".section:nth-of-type(3) p").textContent = t.resourcesText;
-      document.querySelector(".section:nth-of-type(3) button").textContent = t.buttonText;
+      const gtFrame = document.querySelector('iframe.goog-te-menu-frame');
+      if (!gtFrame) return;
+
+      const innerDoc = gtFrame.contentDocument || gtFrame.contentWindow.document;
+      const langLinks = innerDoc.querySelectorAll('.goog-te-menu2-item span.text');
+
+      for (let i = 0; i < langLinks.length; i++) {
+        const link = langLinks[i];
+        if (link.innerHTML.toLowerCase().includes(lang.toLowerCase())) {
+          link.click();
+          break;
+        }
+      }
     }
   </script>
-</body>
-</html>
+  <script type="text/javascript">
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+  }
+
+  function changeLang() {
+    const lang = document.getElementById("language-select").value;
+    const currentLang = "es"; // idioma base de tu página
+    setCookie('googtrans', `/${currentLang}/${lang}`, 1);
+    location.reload(); // recargar para aplicar el idioma
+  }
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'es,en,fr,de,zh-CN,ar',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
