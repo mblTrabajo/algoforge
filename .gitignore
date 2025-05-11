@@ -1,12 +1,12 @@
+# Ignorar archivos temporales
+__pycache__/
+*.pyc
 
----
+# Ignorar entorno virtual de Python
+venv/
 
-## 📌 Estado actual
+# Ignorar archivo de configuración con datos privados
+.env
 
-Proyecto en fase de desarrollo inicial. Se está documentando todo el avance paso por paso con código abierto.
-
----
-
-## 🤝 Contacto y comunidad
-
-(En el futuro: Discord, X, etc.)
+# Ignorar carpeta de node (si se usa en el futuro)
+node_modules/
