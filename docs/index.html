@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AlgoForge — Laboratorio Algorítmico</title>
+  <title>AlgoForge—algorithmicBot</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -95,61 +95,36 @@
   <h1>AlgoForge</h1>
 
   <div class="section">
-    <h2>✦ ¿Qué es AlgoForge?</h2>
+    <h2>✦ What is AlgoForge?</h2>
     <p style="text-align: justify;">
-      Algoforge es una plataforma de desarrollo de algoritmos y soluciones inteligentes orientada a la innovación tecnológica.
-      Nos especializamos en crear herramientas basadas en inteligencia artificial, automatización y análisis de datos,
-      que permiten a empresas y desarrolladores optimizar procesos, tomar decisiones informadas y escalar sus soluciones de manera eficiente.
-      En Algoforge, convertimos ideas complejas en tecnología accesible y de alto impacto.
+     AlgoForge is a platform for the development of algorithms and intelligent solutions focused on technological innovation.
+We specialize in creating tools based on artificial intelligence, automation, and data analysis, which enable companies and developers to optimize processes, make informed decisions, and scale their solutions efficiently.
+At AlgoForge, we transform complex ideas into accessible, high-impact technology.
     </p>
   </div>
 
   <div class="section">
     <h2>✦ Roadmap</h2>
     <ul>
-      <li>Fase A: Página pública, GitHub y hosting</li>
-      <li>Fase B: Creación del token $$$</li>
-      <li>Fase C: Acceso por wallet y niveles</li>
-      <li>Fase D: Lanzamiento del bot</li>
+      <li>Fase A: Public page, GitHub, and hosting.</li>
+      <li>Fase B: Token creation $$$</li>
+      <li>Fase C: Wallet access + tier list</li>
+      <li>Fase D: BOT LAUNCH!!</li>
     </ul>
   </div>
 
   <div class="section">
     <h2>✦ Recursos</h2>
-    <p>Explorá nuestro repositorio para seguir el avance del proyecto:</p>
+    <p>Explore our repository to follow the project's progress:</p>
     <a href="https://github.com/mblTrabajo/algoforge" target="_blank">
-      <button>Ver en GitHub</button>
+      <button>Watch on GitHub</button>
     </a>
   </div>
   <!-- Google Translate -->
-  <div id="google_translate_element" style="display:none;"></div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'es,en,fr,de,zh-CN,ar',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
+  <!-- Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
 
-    function changeLang() {
-      const lang = document.getElementById("language-select").value;
-      const gtFrame = document.querySelector('iframe.goog-te-menu-frame');
-      if (!gtFrame) return;
-
-      const innerDoc = gtFrame.contentDocument || gtFrame.contentWindow.document;
-      const langLinks = innerDoc.querySelectorAll('.goog-te-menu2-item span.text');
-
-      for (let i = 0; i < langLinks.length; i++) {
-        const link = langLinks[i];
-        if (link.innerHTML.toLowerCase().includes(lang.toLowerCase())) {
-          link.click();
-          break;
-        }
-      }
-    }
-  </script>
-  <script type="text/javascript">
+<script type="text/javascript">
   function setCookie(name, value, days) {
     var expires = "";
     if (days) {
@@ -162,16 +137,18 @@
 
   function changeLang() {
     const lang = document.getElementById("language-select").value;
-    const currentLang = "es"; // idioma base de tu página
+    const currentLang = "en"; // si ahora tu idioma base es inglés
     setCookie('googtrans', `/${currentLang}/${lang}`, 1);
     location.reload(); // recargar para aplicar el idioma
   }
 
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
-      pageLanguage: 'es',
-      includedLanguages: 'es,en,fr,de,zh-CN,ar',
+      pageLanguage: 'en',
+      includedLanguages: 'en,es,fr,de,zh-CN,ar',
       layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
   }
 </script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
