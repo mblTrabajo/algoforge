@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,19 +16,15 @@
       text-align: center;
       min-height: 100vh;
       padding: 40px 20px;
-      position: relative;
     }
-
     h1 {
       font-size: 2.5rem;
       color: #00ffc8;
     }
-
     p {
       font-size: 1.1rem;
       color: #ccc;
     }
-
     .section {
       max-width: 800px;
       margin: 40px auto;
@@ -36,85 +33,28 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 255, 200, 0.1);
     }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      padding: 10px;
-      border-bottom: 1px solid #333;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .lang-button {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #00ccff;
-      color: black;
-      padding: 8px 14px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .lang-menu {
-      display: none;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #1a1a1a;
-      border: 1px solid #444;
-      border-radius: 6px;
-      padding: 10px;
-      z-index: 1000;
-    }
-
-    .lang-menu button {
-      display: flex;
-      align-items: center;
-      margin: 5px 0;
-      background: none;
-      color: #eee;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .lang-menu button:hover {
-      color: #00e6ff;
+    img.logo {
+      max-width: 180px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <button class="lang-button" onclick="toggleLangMenu()">🌐 <span id="current-lang">Idioma</span></button>
-  <div class="lang-menu" id="lang-menu">
-    <button onclick="setLang('es')">🇪🇸 <span style="margin-left: 8px;">Español</span></button>
-    <button onclick="setLang('en')">🇬🇧 <span style="margin-left: 8px;">English</span></button>
-    <button onclick="setLang('zh')">🇨🇳 <span style="margin-left: 8px;">中文</span></button>
-    <button onclick="setLang('fr')">🇫🇷 <span style="margin-left: 8px;">Français</span></button>
-    <button onclick="setLang('de')">🇩🇪 <span style="margin-left: 8px;">Deutsch</span></button>
-  </div>
-
-  <img src="logo.png" alt="AlgoForge Logo" style="max-width: 180px; margin-bottom: 20px;" />
-<h1 id="title">AlgoForge</h1>
-
-  <p id="subtitle">Automated Algorithm Lab for the Decentralized Future</p>
+  <img src="logo.png" alt="AlgoForge Logo" class="logo" />
+  <h1>AlgoForge</h1>
+  <p>Automated Algorithm Lab for the Decentralized Future</p>
 
   <div class="section">
-    <h2 id="what-title">🔧 ¿Qué es AlgoForge?</h2>
-    <p id="what-desc">Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.</p>
+    <h2>🔧 ¿Qué es AlgoForge?</h2>
+    <p>
+      Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />
+      Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.
+    </p>
   </div>
 
   <div class="section">
-    <h2 id="roadmap-title">📅 Roadmap Inicial</h2>
-    <ul id="roadmap-list">
+    <h2>📅 Roadmap Inicial</h2>
+    <ul>
       <li>✅ Fase A: Página pública, GitHub y hosting</li>
       <li>🔜 Fase B: Creación del token $FORGE</li>
       <li>🔜 Fase C: Acceso por wallet y niveles</li>
@@ -123,122 +63,11 @@
   </div>
 
   <div class="section">
-    <h2 id="resources-title">📎 Recursos</h2>
-    <p id="resources-desc">Revisá nuestro repositorio con el avance del proyecto:</p>
+    <h2>📎 Recursos</h2>
+    <p>Revisá nuestro repositorio con el avance del proyecto:</p>
     <a href="https://github.com/mblTrabajo/algoforge" target="_blank">
       <button>🚀 Ver en GitHub</button>
     </a>
   </div>
-<script>
-  const texts = {
-    es: {
-      title: "🚀 AlgoForge",
-      subtitle: "Laboratorio Algorítmico Automatizado para el Futuro Descentralizado",
-      whatTitle: "🔧 ¿Qué es AlgoForge?",
-      whatDesc: "Plataforma descentralizada con 15 bots de trading. Fácil, pasiva y segura.<br />Acceso con el token $FORGE. Cuantos más tokens, mayor nivel y beneficios.",
-      roadmapTitle: "📅 Roadmap Inicial",
-      roadmapList: [
-        "✅ Fase A: Página pública, GitHub y hosting",
-        "🔜 Fase B: Creación del token $FORGE",
-        "🔜 Fase C: Acceso por wallet y niveles",
-        "🔜 Fase D: Bots activos con estadísticas reales"
-      ],
-      resourcesTitle: "📎 Recursos",
-      resourcesDesc: "Revisá nuestro repositorio con el avance del proyecto:"
-    },
-    en: {
-      title: "🚀 AlgoForge",
-      subtitle: "Automated Algorithm Lab for the Decentralized Future",
-      whatTitle: "🔧 What is AlgoForge?",
-      whatDesc: "A decentralized platform with 15 trading bots. Easy, passive, and secure.<br />Access with $FORGE token. The more you hold, the higher your level and benefits.",
-      roadmapTitle: "📅 Initial Roadmap",
-      roadmapList: [
-        "✅ Phase A: Public page, GitHub and hosting",
-        "🔜 Phase B: Token $FORGE creation",
-        "🔜 Phase C: Wallet access and levels",
-        "🔜 Phase D: Bots with real statistics"
-      ],
-      resourcesTitle: "📎 Resources",
-      resourcesDesc: "Check out our GitHub repository for updates:"
-    },
-    zh: {
-      title: "🚀 AlgoForge",
-      subtitle: "去中心化未来的自动算法实验室",
-      whatTitle: "🔧 什么是AlgoForge？",
-      whatDesc: "一个包含15个交易机器人的去中心化平台。简单、被动、安全。<br />使用$FORGE代币访问，持有越多，等级和福利越高。",
-      roadmapTitle: "📅 初始路线图",
-      roadmapList: [
-        "✅ 阶段A：公共页面，GitHub和托管",
-        "🔜 阶段B：创建$FORGE代币",
-        "🔜 阶段C：钱包访问和等级",
-        "🔜 阶段D：具有真实统计数据的机器人"
-      ],
-      resourcesTitle: "📎 资源",
-      resourcesDesc: "查看我们的GitHub仓库以获取更新："
-    },
-    fr: {
-      title: "🚀 AlgoForge",
-      subtitle: "Laboratoire d'algorithmes automatisés pour un futur décentralisé",
-      whatTitle: "🔧 Qu'est-ce qu'AlgoForge ?",
-      whatDesc: "Plateforme décentralisée avec 15 bots de trading. Facile, passive et sécurisée.<br />Accès avec le jeton $FORGE. Plus vous en avez, plus vos avantages sont élevés.",
-      roadmapTitle: "📅 Feuille de route initiale",
-      roadmapList: [
-        "✅ Phase A : Page publique, GitHub et hébergement",
-        "🔜 Phase B : Création du token $FORGE",
-        "🔜 Phase C : Accès par wallet et niveaux",
-        "🔜 Phase D : Bots actifs avec statistiques réelles"
-      ],
-      resourcesTitle: "📎 Ressources",
-      resourcesDesc: "Consultez notre dépôt GitHub pour les mises à jour :"
-    },
-    de: {
-      title: "🚀 AlgoForge",
-      subtitle: "Automatisiertes Algorithmus-Labor für die dezentrale Zukunft",
-      whatTitle: "🔧 Was ist AlgoForge?",
-      whatDesc: "Eine dezentrale Plattform mit 15 Trading-Bots. Einfach, passiv und sicher.<br />Zugang über den $FORGE-Token. Je mehr du hast, desto höher dein Level und deine Vorteile.",
-      roadmapTitle: "📅 Roadmap",
-      roadmapList: [
-        "✅ Phase A: Öffentliche Seite, GitHub und Hosting",
-        "🔜 Phase B: Erstellung des $FORGE Tokens",
-        "🔜 Phase C: Wallet-Zugriff und Stufen",
-        "🔜 Phase D: Bots mit echten Statistiken"
-      ],
-      resourcesTitle: "📎 Ressourcen",
-      resourcesDesc: "Besuche unser GitHub-Repository für Updates:"
-    }
-  };
-
-  const currentLangLabel = {
-    es: "🇪🇸 Español", en: "🇬🇧 English", zh: "🇨🇳 中文",
-    fr: "🇫🇷 Français", de: "🇩🇪 Deutsch"
-  };
-
-  function setLang(lang) {
-    const t = texts[lang];
-    document.getElementById("title").textContent = t.title;
-    document.getElementById("subtitle").textContent = t.subtitle;
-    document.getElementById("what-title").textContent = t.whatTitle;
-    document.getElementById("what-desc").innerHTML = t.whatDesc;
-    document.getElementById("roadmap-title").textContent = t.roadmapTitle;
-    const roadmapList = document.getElementById("roadmap-list");
-    roadmapList.innerHTML = "";
-    t.roadmapList.forEach(item => {
-      const li = document.createElement("li");
-      li.textContent = item;
-      roadmapList.appendChild(li);
-    });
-    document.getElementById("resources-title").textContent = t.resourcesTitle;
-    document.getElementById("resources-desc").textContent = t.resourcesDesc;
-    document.getElementById("lang-menu").style.display = "none";
-    document.getElementById("current-lang").textContent = currentLangLabel[lang];
-  }
-
-  function toggleLangMenu() {
-    const menu = document.getElementById("lang-menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
-  }
-
-  setLang('es');
-</script>
 </body>
 </html>
