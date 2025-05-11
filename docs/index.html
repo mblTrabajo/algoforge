@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AlgoForge — Laboratorio Algorítmico</title>
+  <title>AlgoForge — AlgorithmicBot</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -19,13 +19,11 @@
       cursor: none;
       overflow-x: hidden;
     }
-
     h1 {
       font-size: 4rem;
       color: #00aaff;
       margin-bottom: 10px;
     }
-
     .section {
       max-width: 800px;
       margin: 40px auto;
@@ -36,18 +34,15 @@
       box-shadow: 0 0 20px rgba(0, 230, 255, 0.2);
       color: #555;
     }
-
     ul {
       list-style: none;
       padding-left: 0;
       color: #555;
     }
-
     li {
       font-size: 1rem;
       margin-bottom: 10px;
     }
-
     a button {
       background-color: #00aaff;
       color: white;
@@ -57,15 +52,29 @@
       border-radius: 8px;
       cursor: pointer;
     }
-
     a button:hover {
       background-color: #008ecc;
     }
-
+    .lang-selector {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    #language-select {
+      background-color: #00aaff;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+      box-shadow: 0 0 10px #00ccee;
+      cursor: pointer;
+    }
     .progress-container {
       margin-top: 20px;
     }
-
     .progress-bar {
       background-color: #e0e0e0;
       border-radius: 10px;
@@ -73,7 +82,6 @@
       height: 25px;
       margin-bottom: 20px;
     }
-
     .progress-fill {
       height: 100%;
       background: linear-gradient(90deg, #00e6ff, #00aaff);
@@ -84,8 +92,6 @@
       line-height: 25px;
       font-size: 14px;
     }
-
-    /* Cursor personalizado */
     .cursor-dot {
       position: fixed;
       width: 18px;
@@ -97,7 +103,6 @@
       z-index: 9999;
       transform: translate(-50%, -50%);
     }
-
     .trail {
       position: absolute;
       width: 12px;
@@ -110,50 +115,75 @@
       animation: fadeOut 1s forwards;
       z-index: 9998;
     }
-
     @keyframes fadeOut {
       to {
         opacity: 0;
         transform: scale(0.5);
       }
     }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+    .goog-logo-link, .goog-te-gadget span { display: none !important; }
   </style>
 </head>
 <body>
+  <div class="lang-selector">
+    <select id="language-select" onchange="changeLang()">
+      <option value="en">🇬🇧 English</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="zh-CN">🇨🇳 中文</option>
+      <option value="ar">🇸🇦 العربية</option>
+    </select>
+  </div>
+
   <h1>AlgoForge</h1>
 
   <div class="section">
-    <h2>✦ ¿Qué es AlgoForge?</h2>
+    <h2>✦ What is AlgoForge?</h2>
     <p style="text-align: justify;">
-      Algoforge es una plataforma de desarrollo de algoritmos y soluciones inteligentes orientada a la innovación tecnológica.
-      Nos especializamos en crear herramientas basadas en inteligencia artificial, automatización y análisis de datos,
-      que permiten a empresas y desarrolladores optimizar procesos, tomar decisiones informadas y escalar sus soluciones de manera eficiente.
-      En Algoforge, convertimos ideas complejas en tecnología accesible y de alto impacto.
+      AlgoForge is a platform for the development of algorithms and intelligent solutions focused on technological innovation.
+      We specialize in creating tools based on artificial intelligence, automation, and data analysis, which enable companies and developers to optimize processes, make informed decisions, and scale their solutions efficiently.
+      At AlgoForge, we transform complex ideas into accessible, high-impact technology.
     </p>
   </div>
 
   <div class="section">
     <h2>✦ Roadmap</h2>
     <div class="progress-container">
-      <div class="progress-bar"><div class="progress-fill" data-width="100%">Fase A: Página pública, GitHub y hosting</div></div>
-      <div class="progress-bar"><div class="progress-fill" data-width="70%">Fase B: Creación del token $FORGE</div></div>
-      <div class="progress-bar"><div class="progress-fill" data-width="40%">Fase C: Acceso por wallet y niveles</div></div>
-      <div class="progress-bar"><div class="progress-fill" data-width="30%">Fase D: Lanzamiento del bot</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="100%">Phase A: Public page, GitHub and hosting</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="80%">Phase B: Token creation $$$</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="50%">Phase C: Wallet access + tier system</div></div>
+      <div class="progress-bar"><div class="progress-fill" data-width="30%">Phase D: Bot launch</div></div>
     </div>
   </div>
 
   <div class="section">
-    <h2>✦ Recursos</h2>
-    <p>Explorá nuestro repositorio para seguir el avance del proyecto:</p>
+    <h2>✦ Resources</h2>
+    <p>Explore our repository to follow the project's progress:</p>
     <a href="https://github.com/mblTrabajo/algoforge" target="_blank">
-      <button>Ver en GitHub</button>
+      <button>Watch on GitHub</button>
     </a>
   </div>
 
-  <!-- Cursor visual -->
+  <div id="google_translate_element" style="display: none;"></div>
   <div class="cursor-dot" id="cursorDot"></div>
 
   <script>
+    // Cursor personalizado
+    const cursor = document.getElementById("cursorDot");
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+      const trail = document.createElement("div");
+      trail.className = "trail";
+      trail.style.left = e.pageX + "px";
+      trail.style.top = e.pageY + "px";
+      document.body.appendChild(trail);
+      setTimeout(() => trail.remove(), 1000);
+    });
+
     // Barras animadas
     window.addEventListener('load', () => {
       document.querySelectorAll('.progress-fill').forEach(bar => {
@@ -163,31 +193,32 @@
       });
     });
 
-    // Cursor personalizado
-    const cursor = document.getElementById("cursorDot");
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
+    // Traducción automática
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
 
-      const trail = document.createElement("div");
-      trail.className = "trail";
-      trail.style.left = e.pageX + "px";
-      trail.style.top = e.pageY + "px";
-      document.body.appendChild(trail);
-      setTimeout(() => trail.remove(), 1000);
-    });
-  
-    // Cambio de color al hacer clic
-    document.addEventListener("mousedown", () => {
-      cursor.style.background = "#ff00cc";
-      cursor.style.boxShadow = "0 0 10px #ff66ff, 0 0 25px #ff00cc";
-    });
+    function changeLang() {
+      const lang = document.getElementById("language-select").value;
+      const currentLang = "en";
+      setCookie('googtrans', `/${currentLang}/${lang}`, 1);
+      location.reload();
+    }
 
-    document.addEventListener("mouseup", () => {
-      cursor.style.background = "#00aaff";
-      cursor.style.boxShadow = "0 0 8px #00e6ff, 0 0 20px #00ccee";
-    });
-    
-</script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,fr,de,zh-CN,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
