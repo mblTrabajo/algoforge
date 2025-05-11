@@ -26,7 +26,7 @@
 
 **AlgoForge** es una plataforma descentralizada que permite operar con **bots algorítmicos de trading** de forma **pasiva, segura y sin conocimientos técnicos**.
 
-> 🎯 Cuantos más tokens $FORGE tengas, mayor es tu nivel y tus beneficios (Bronce, Plata, Oro, Pro).
+> 🎯 Cuantos más tokens $$$$ tengas, mayor es tu nivel y tus beneficios (Bronce, Plata, Oro, Pro).
 
 ---
 
@@ -51,7 +51,7 @@
 | Fase | Descripción | Estado |
 |------|-------------|--------|
 | A | Página pública y estructura del proyecto | ✅ Completado |
-| B | Creación del token $FORGE (testnet) | 🔜 Próximo paso |
+| B | Creación del token $$$$ (testnet) | 🔜 Próximo paso |
 | C | Acceso con wallet y niveles por token | 🔜 |
 | D | Activación de bots con estadísticas | 🔜 |
 | E | Tokenomics + quema por comisiones | 🔜 |
