@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How It Works — AlgoForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #ffffff;
+      color: #111;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #00aaff;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
+    }
+    img.graph {
+      max-width: 100%;
+      border: 2px solid #00e6ff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,230,255,0.2);
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-top: 20px;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #00aaff;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00ccee;
+    }
+    a.button:hover {
+      background-color: #008ecc;
+    }
+  
+@media screen and (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.4;
+  }
+  .section {
+    padding: 20px 10px !important;
+  }
+  #timer {
+    font-size: 36px !important;
+    letter-spacing: 3px !important;
+  }
+  .section > div, .countdown-box {
+    padding: 20px !important;
+  }
+  a.back-button, a.button {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+  }
+  table, th, td {
+    font-size: 12px !important;
+    padding: 6px !important;
+  }
+}
+</style>
+</head>
+<body>
+<div class="content">
+<h1>How AlgoForge Works</h1>
+<p>
+      AlgoForge combines algorithmic trading, AI-powered strategies, and blockchain-integrated access models to help users grow their capital passively and securely.
+    </p>
+<img alt="Algorithm Growth Graph" class="graph" src="algoforge_365days_growth.gif"/>
+<p>
+      This animated chart demonstrates the simulated 1-year ROI performance of 15 different trading algorithms deployed in different exchanges.
+      Each algorithm is optimized for unique market conditions and trends.
+    </p>
+<h2 style="color: #00aaff; margin-top: 60px;">Strategy Overview of 15 Trading Algorithms</h2>
+<table class="algo-table">
+<thead>
+<tr>
+<th>#</th>
+<th>Algorithm</th>
+<th>Strategy Type</th>
+<th>Use Case &amp; Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>MACD Cross</td><td>Long / Mixed</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Detects bullish/bearish momentum via moving average crossovers. Good in trending markets.</td></tr>
+<tr><td>2</td><td>RSI Oversold/Overbought</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Reversal / Short</td><td>Enters on RSI extremes. Ideal for short-term reversal plays.</td></tr>
+<tr><td>3</td><td>Bollinger Bounce</td><td>Range-bound</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Trades near bands. Excels in lateral markets.</td></tr>
+<tr><td>4</td><td>Breakout Scanner</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Long / Short</td><td>Triggers trades on breakouts from tight ranges. Great for volatility.</td></tr>
+<tr><td>5</td><td>Trend Following EMA</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Long</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Follows long-term trends using EMAs. Ideal for uptrending markets.</td></tr>
+<tr><td>6</td><td>Adaptive Grid Trading</td><td>Range-bound</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Buys/sells within a grid. Profits in sideways markets.</td></tr>
+<tr><td>7</td><td>Pair Arbitrage</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Neutral</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Exploits mispricing between asset pairs. Market-neutral.</td></tr>
+<tr><td>8</td><td>Volume + RSI</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Long / Short</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Enters on volume surges confirmed by RSI. Quick and reactive.</td></tr>
+<tr><td>9</td><td>Mean Reversion</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Short-Term</td><td>Assumes prices revert to the mean. Works in non-trending environments.</td></tr>
+<tr><td>10</td><td>Momentum Ranking</td><td>Long</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Buys strongest assets daily. High turnover, momentum-based.</td></tr>
+<tr><td>11</td><td>Dynamic Trailing Stop</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Any</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Protects gains with adaptive stop-losses. Used for exits.</td></tr>
+<tr><td>12</td><td>Social Sentiment Feed</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Speculative</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Trades based on Twitter/Reddit sentiment spikes.</td></tr>
+<tr><td>13</td><td>Time Series (LSTM)</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Predictive</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Uses machine learning to forecast direction.</td></tr>
+<tr><td>14</td><td>Liquidity Snipe</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Opportunistic</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Targets trades near high-liquidity zones (whale activity).</td></tr>
+<tr><td>15</td><td>Multi-Indicator Confirmation</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Hybrid</td><td style="color: transparent; text-shadow: 0 0 12px rgba(0, 170, 255, 0.35); background: linear-gradient(to right, rgba(200,200,255,0.1), rgba(0,170,255,0.1)); user-select: none;">Confirms trades with MACD + RSI + Volume. Reduces noise.</td></tr>
+</tbody>
+</table>
+<style>
+      .algo-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-family: 'Orbitron', sans-serif;
+        color: #333;
+      }
+      .algo-table thead {
+        background-color: #00aaff;
+        color: white;
+      }
+      .algo-table th, .algo-table td {
+        border: 1px solid #00ccee;
+        padding: 10px 14px;
+        text-align: left;
+        font-size: 14px;
+      }
+      .algo-table tbody tr:nth-child(odd) {
+        background-color: #f0faff;
+      }
+      .algo-table tbody tr:nth-child(even) {
+        background-color: #e0f7ff;
+      }
+    </style>
+<a class="button" href="index.html">⬅ Back to Main Page</a>
+</div>
+</body>
+</html>

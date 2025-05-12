@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Access Levels — AlgoForge</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      padding: 40px;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #00aaff;
+    }
+    .content {
+      max-width: 900px;
+      margin: auto;
+      text-align: left;
+    }
+    p {
+      font-size: 15px;
+      color: #333;
+      margin: 20px 0;
+    }
+    ul {
+      margin-left: 20px;
+      font-size: 14px;
+      color: #444;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      font-family: 'Orbitron', sans-serif;
+    }
+    th, td {
+      border: 1px solid #00ccee;
+      padding: 12px;
+      font-size: 14px;
+    }
+    thead {
+      background-color: #00aaff;
+      color: white;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f0faff;
+    }
+    .note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 40px;
+      text-align: center;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 6px;
+      border-radius: 6px;
+      display: block;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  
+@media screen and (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.6rem !important;
+    line-height: 1.4;
+  }
+  .content {
+    padding: 20px 10px !important;
+  }
+  table, th, td {
+    font-size: 12px !important;
+    padding: 6px !important;
+  }
+  a.back-button {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+  }
+}
+</style>
+<style>
+  .back-button {
+    display: inline-block;
+    margin-top: 60px;
+    background-color: #00aaff;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ccee;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+  }
+  .back-button:hover {
+    background-color: #008ecc;
+  }
+</style>
+</head>
+<body>
+<div class="content">
+<h1>🔓 Access Levels</h1>
+<p style="margin-bottom: 24px;">
+      At AlgoForge, access is not bought — it's earned. Our level system isn't tied to market value but to how many $$$$ tokens you hold. That means you're rewarded for holding, not punished by price swings.
+    </p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Token Holdings</th>
+<th>Benefits</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Bronze</td><td>100,000 – 500,000</td><td>3 basic bots · 1 trade slot · Weekly stats</td></tr>
+<tr><td>Silver</td><td>500,001 – 2,000,000</td><td>6 bots · 3 trades · Access to graph history</td></tr>
+<tr><td>Gold</td><td>2,000,001 – 5,000,000</td><td>All bots · 5 trades · Sentiment alerts</td></tr>
+<tr><td>Platinum</td><td>5,000,001 – 10,000,000</td><td>Advanced bots (LSTM) · Mirror trading · Drawdown comparisons</td></tr>
+<tr><td>Pro</td><td>10,000,001+</td><td>Beta features · Strategy cloning · Daily AI reports</td></tr>
+</tbody>
+</table>
+<h2>📈 What If the Token Price Rises?</h2>
+<p style="margin-bottom: 24px;">
+      Great question — and here's why our system is sustainable:
+    </p>
+<ul style="margin-bottom: 30px;">
+<li><strong>✅ 1. Rewards Early Holders:</strong> If you acquired your tokens early, you stay in your tier even if the price grows.</li>
+<li><strong>✅ 2. Prevents Re-buy Pressure:</strong> You don't need to buy more if the price goes up. No artificial barriers.</li>
+<li><strong>✅ 3. Smart Contract Friendly:</strong> Your access is verified on-chain. No need for price oracles or conversions.</li>
+<li><strong>✅ 4. Emotionally Rewarding:</strong> You feel secure. No downgrades, no stress — just progress.</li>
+</ul>
+<p style="margin-bottom: 24px;">Here’s what the logic looks like on-chain:</p>
+<code>if (userHoldings &gt;= 500000) {
+  level = "Silver";
+}</code>
+<h2>💡 But What If the Price Soars?</h2>
+<p style="margin-bottom: 24px;">
+      If $$$$ appreciates massively, governance can vote to adjust tiers to keep them fair and accessible.
+      We may also add "sub-levels" to refine progression without touching existing rewards.
+    </p>
+<p class="note">This system protects users, rewards loyalty, avoids economic friction, and keeps scaling into the future.</p>
+</div>
+<a class="back-button" href="index.html">⬅ Back to Main Page</a></body>
+</html>
