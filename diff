@@ -1,0 +1,63 @@
+            <div class="user-generated-algorithms-promo">
+                <h4>Create & Sell Your Strategies</h4>
+-                <p>Leverage your trading knowledge. Design custom algorithms and offer them on our marketplace to earn passive income from your expertise.</p>
+                 <img src="algo-marketplace-preview.png" alt="AlgoForge Algorithm Marketplace Preview" class="marketplace-preview-image">
++                <p>Leverage your trading knowledge. Design custom algorithms and offer them on our marketplace to earn passive income from your expertise.</p>
+             </div>
+         </div>
+ 
+...
+
+...
+.user-generated-algorithms-promo {
+    background-color: var(--card-bg-color); /* Consistent with other cards */
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--neon-gold-glow); 
+    text-align: center;
+    box-shadow: 0 0 10px rgba(var(--neon-gold-glow), 0.3), 0 0 18px rgba(var(--neon-gold-glow),0.2);
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+-    justify-content: flex-start; /* Align content to the top */
++    justify-content: space-evenly; /* Distribute content uniformly */
+     align-items: center; /* Center content horizontally */
+ }
+ 
+ .user-generated-algorithms-promo h4 {
+     color: var(--neon-gold-color);
+     font-size: 1.8rem; 
+-    margin-bottom: 15px;
++    margin-bottom: 0; /* Let space-evenly handle spacing */
+     text-shadow: 0 0 4px var(--neon-gold-color), 
+                  0 0 8px var(--neon-gold-color), 
+                  0 0 12px var(--neon-gold-glow);
+     transition: text-shadow 0.3s ease-in-out;
+ }
+ 
+ .user-generated-algorithms-promo p {
+     color: var(--text-color); 
+     font-size: 1.1rem;
+     max-width: 650px; 
+     margin-left: auto;
+     margin-right: auto;
+     line-height: 1.7;
+     text-shadow: 0 0 2px rgba(var(--neon-gold-glow),0.5); 
+     transition: text-shadow 0.3s ease-in-out;
+-    margin-bottom: 20px; /* Add some space above the image */
++    margin-bottom: 0; /* Let space-evenly handle spacing */
+ }
+ 
+ .user-generated-algorithms-promo .marketplace-preview-image {
+     max-width: 100%;
+     height: auto;
+     border-radius: 6px;
+-    margin-top: 15px; /* Space between text and image */
++    margin-top: 0; /* Let space-evenly handle spacing */
++    margin-bottom: 0; /* Let space-evenly handle spacing */
+     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+     object-fit: contain; /* Ensure the image fits well */
+     border: 1px solid rgba(var(--border-color-rgb), 0.3);
+ }
+ 
+ .golden-objective {
