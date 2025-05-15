@@ -1,0 +1,94 @@
+<section id="funding-cycle" class="feature-section alt-bg">
+    <div class="section-content-full">
+        <h3 class="funding-cycle-main-title">AlgoForge Funding Cycle - Explained with Math</h3>
+        <p class="funding-cycle-subtitle">This section breaks down the sustainability of the AlgoForge model using example values and a full economic cycle illustration.</p>
+
+        <div class="funding-cycle-content-wrapper">
+            <div class="funding-column left-column">
+                <div class="math-explanation-box">
+                    <h4>Mathematical Breakdown (Example)</h4>
+                    <div class="math-step">
+                        <span class="step-label">Step 1: Profit Generated</span>
+                        <span class="step-formula">Gross Profit (GP) = Account Size * Profit % <br> $25,000 * 12% = <span class="positive-value">$3,000</span></span>
+                    </div>
+                    <div class="math-step">
+                        <span class="step-label">Step 2: User Withdrawal</span>
+                        <span class="step-formula">User Withdrawal (UW) = GP * User Share % * Cycle Withdrawal Rate % <br> $3,000 * 80% * 8.5% = <span class="positive-value">$204</span></span>
+                    </div>
+                    <div class="math-step">
+                        <span class="step-label">Step 3: Platform Retention</span>
+                        <span class="step-formula">Platform Share (PS) = GP - UW <br> $3,000 - $204 = <span class="retained-value">$2,796</span></span>
+                    </div>
+                    <div class="math-step">
+                        <span class="step-label">Step 4: User ROI (on Stake for this Cycle)</span>
+                        <span class="step-formula">User ROI = (UW / Example Stake) * 100 <br> ($204 / $1,300) * 100 = <span class="positive-value">15.7%</span></span>
+                    </div>
+                     <p class="small-note">Note: Values are illustrative. $1,300 example stake represents the $ALFO equivalent. Cycle Withdrawal Rate is a parameter that can be adjusted.</p>
+                </div>
+            </div>
+            <div class="funding-column right-column">
+                <h3 class="economic-cycle-title">Full Economic Cycle Flow</h3>
+                <div class="economic-cycle-layout">
+                    <div class="cycle-diagram-container">
+                        <svg id="economic-cycle-svg" viewBox="0 0 220 220" width="280" height="280" aria-labelledby="economicCycleTitle" role="img">
+                            <title id="economicCycleTitle">Interactive Economic Cycle Diagram</title>
+                            <defs>
+                                <marker id="arrowhead-1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 6 3, 0 6" fill="currentColor" /></marker>
+                                <marker id="arrowhead-2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 6 3, 0 6" fill="currentColor" /></marker>
+                                <marker id="arrowhead-3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 6 3, 0 6" fill="currentColor" /></marker>
+                                <marker id="arrowhead-4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 6 3, 0 6" fill="currentColor" /></marker>
+                                <marker id="arrowhead-5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 6 3, 0 6" fill="currentColor" /></marker>
+                                <marker id="arrowhead-6" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 6 3, 0 6" fill="currentColor" /></marker>
+                            </defs>
+                            <!-- Segments will be drawn here by JS or predefined if static -->
+                        </svg>
+                    </div>
+                    <div class="cycle-content-container">
+                        <div class="cycle-step-content active" data-step-content-id="1">
+                            <span class="step-number-display" style="background-color: var(--cycle-color-1, #8e44ad);">1</span>
+                            <div class="step-text-content">
+                                <h4 class="step-title">Stake & Challenge</h4>
+                                <p class="step-description">User stakes $ALFO tokens (e.g., $1,300 value) to enter a funding challenge.</p>
+                            </div>
+                        </div>
+                        <div class="cycle-step-content" data-step-content-id="2" style="display:none;">
+                            <span class="step-number-display" style="background-color: var(--cycle-color-2, #c0392b);">2</span>
+                            <div class="step-text-content">
+                                <h4 class="step-title">Performance Phase</h4>
+                                <p class="step-description">User operates AlgoForge bots to meet risk and profit targets, completing the challenge.</p>
+                            </div>
+                        </div>
+                        <div class="cycle-step-content" data-step-content-id="3" style="display:none;">
+                            <span class="step-number-display" style="background-color: var(--cycle-color-3, #d35400);">3</span>
+                            <div class="step-text-content">
+                                <h4 class="step-title">Funded Account Access</h4>
+                                <p class="step-description">User gains access to a funded account (e.g., $25,000 simulated capital) to trade with.</p>
+                            </div>
+                        </div>
+                        <div class="cycle-step-content" data-step-content-id="4" style="display:none;">
+                            <span class="step-number-display" style="background-color: var(--cycle-color-4, var(--accent-color));">4</span>
+                            <div class="step-text-content">
+                                <h4 class="step-title">Profit Generation & Withdrawal</h4>
+                                <p class="step-description">User generates profits (e.g., $3,000). A portion is available for withdrawal per cycle (e.g., $204).</p>
+                            </div>
+                        </div>
+                        <div class="cycle-step-content" data-step-content-id="5" style="display:none;">
+                            <span class="step-number-display" style="background-color: var(--cycle-color-5, #27ae60);">5</span>
+                            <div class="step-text-content">
+                                <h4 class="step-title">Ecosystem Growth</h4>
+                                <p class="step-description">The platform retains a share (e.g., $2,796) which funds sustainability, liquidity, and staking rewards.</p>
+                            </div>
+                        </div>
+                        <div class="cycle-step-content" data-step-content-id="6" style="display:none;">
+                            <span class="step-number-display" style="background-color: var(--cycle-color-6, var(--neon-gold-color)); color: var(--primary-color);">6</span>
+                            <div class="step-text-content">
+                                <h4 class="step-title">Continuous Engagement</h4>
+                                <p class="step-description">User continues farming $ALFO, can reinvest, climb account tiers, and enter further challenges, fostering a cycle of growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,102 @@
+<section id="tokenomics" class="feature-section alt-bg">
+    <div class="section-content-full">
+        <h3 class="tokenomics-main-title">AlgoForge Tokenomics on Solana</h3>
+        <p class="subtitle tokenomics-subtitle">The $ALFO token powers the AlgoForge ecosystem on the Solana network, offering speed, low cost, and scalability.</p>
+
+        <div class="token-info-grid">
+            <div class="token-info-card">
+                <h4>$ALFO Token</h4>
+                <p><strong>Network:</strong> Solana</p>
+                <p><strong>Total Supply:</strong> 1,000,000,000 $ALFO</p>
+                <p><strong>Decimals:</strong> 9</p>
+                <p><strong>Initial Circulating Supply:</strong> 80,000,000 $ALFO</p>
+            </div>
+            <div class="token-info-card">
+                <h4>Deflationary Mechanism</h4>
+                <p>Profit fees in $ALFO.</p>
+                <p>Sent to a burn address on Solana.</p>
+                <p><strong>Result:</strong> <span class="accent-text">Deflationary Mechanism</span> &mdash; Supply reduced with each profitable trade.</p>
+                <p class="small-note">The Solana bot contract handles direct burn via spl_token::burn.</p>
+            </div>
+        </div>
+
+        <div class="tokenomics-interactive-area">
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="distribution">Distribution</button>
+                    <button class="tab-button" data-tab="vesting">Vesting & Timelock</button>
+                    <button class="tab-button" data-tab="utilities">Utilities</button>
+                    <button class="tab-button" data-tab="solana-dynamics">On Solana</button>
+                </div>
+                <div class="tab-content-area">
+                    <div id="distribution" class="tab-content active">
+                        <h4>Token Distribution</h4>
+                        <ul class="distribution-list">
+                            <li><strong>🔹 Community / Airdrop (10% - 100,000,000 Tokens):</strong> Incentives, rewards, marketing</li>
+                            <li><strong>🔸 Ecosystem Reserve (30% - 300,000,000 Tokens):</strong> Bots, staking, funding, rewards</li>
+                            <li><strong>💰 Public Sale (8% - 80,000,000 Tokens):</strong> 🚀 Sale to raise $250,000</li>
+                            <li><strong>🛠 Dev/Team (15% - 150,000,000 Tokens):</strong> With 1-year lock-up (vesting)</li>
+                            <li><strong>🧠 Advisors / Legal (5% - 50,000,000 Tokens):</strong> External support, with partial lock-up</li>
+                            <li><strong>💼 Treasury / DAO (20% - 200,000,000 Tokens):</strong> Future governance, scaling decisions</li>
+                            <li><strong>🌐 DEX Liquidity (12% - 120,000,000 Tokens):</strong> Initial pool for liquidity</li>
+                        </ul>
+                        <div class="distribution-visual-container">
+                            <p class="small-note chart-note">Visual representation of the distribution:</p>
+                            <div class="distribution-visual">
+                                <div class="dist-bar" data-category="ecosystem-reserve" data-value="30"><div class="dist-bar-fill"></div><span class="label">🔸 Ecosystem Reserve 30%</span></div>
+                                <div class="dist-bar" data-category="treasury-dao" data-value="20"><div class="dist-bar-fill"></div><span class="label">💼 Treasury / DAO 20%</span></div>
+                                <div class="dist-bar" data-category="dev-team" data-value="15"><div class="dist-bar-fill"></div><span class="label">🛠 Dev/Team 15%</span></div>
+                                <div class="dist-bar" data-category="dex-liquidity" data-value="12"><div class="dist-bar-fill"></div><span class="label">🌐 DEX Liquidity 12%</span></div>
+                                <div class="dist-bar" data-category="community-airdrop" data-value="10"><div class="dist-bar-fill"></div><span class="label">🔹 Community / Airdrop 10%</span></div>
+                                <div class="dist-bar" data-category="public-sale" data-value="8"><div class="dist-bar-fill"></div><span class="label">💰 Public Sale 8%</span></div>
+                                <div class="dist-bar" data-category="advisors-legal" data-value="5"><div class="dist-bar-fill"></div><span class="label">🧠 Advisors / Legal 5%</span></div>
+                            </div>
+                        </div>
+                        <p class="small-note">All vested tokens will be locked in Solana native timelock contracts.</p>
+                    </div>
+                    <div id="vesting" class="tab-content">
+                        <h4>Vesting & Timelock</h4>
+                        <ul class="vesting-list">
+                            <li><strong>Team:</strong> 12-month cliff + linear monthly unlock over 36 months.</li>
+                            <li><strong>Partners/Reserves:</strong> Gradual vesting (6/12/18 months).</li>
+                            <li><strong>Liquidity:</strong> 30% initial unlock + 70% locked for 6 months.</li>
+                        </ul>
+                    </div>
+                    <div id="utilities" class="tab-content">
+                        <h4>$ALFO Token Utilities</h4>
+                        <div class="utilities-grid">
+                            <div class="utility-card"><h5>Bot Activation</h5><p>$ALFO is required to activate and maintain bots.</p></div>
+                            <div class="utility-card"><h5>Tiered Access</h5><p>$ALFO holding defines the user's tier.</p></div>
+                            <div class="utility-card"><h5>Fees and Burn</h5><p>Profits pay fees that are directly burned.</p></div>
+                            <div class="utility-card"><h5>DAO Governance</h5><p>Holders can vote on key changes.</p></div>
+                            <div class="utility-card"><h5>Rewards and Staking</h5><p>Incentives for holding and supporting the ecosystem.</p></div>
+                            <div class="utility-card"><h5>Advanced API Credits</h5><p>Pro tier can use custom bots with $ALFO credit.</p></div>
+                        </div>
+                    </div>
+                    <div id="solana-dynamics" class="tab-content">
+                        <h4>Dynamics on Solana</h4>
+                        <p>All interactions (access, fee payment, burn, staking) are executed as standard SPL transactions.</p>
+                        <p>Contracts are designed for low cost (less than $0.01 per transaction).</p>
+                        <p>Direct connection from the app with Phantom, Solflare, Glow, or other compatible wallets.</p>
+                        <div class="solana-advantage">
+                            <h5>Why Solana?</h5>
+                            <ul>
+                                <li><img src="/icon-check.png" alt="check" class="inline-icon">Low fees → real viability for micro-transactions and real-time bots.</li>
+                                <li><img src="/icon-check.png" alt="check" class="inline-icon">High scalability → ideal for running multiple bots simultaneously.</li>
+                                <li><img src="/icon-check.png" alt="check" class="inline-icon">Active development and tools → great support for advanced smart contracts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="vision-sustainable">
+            <h4>Sustainable Vision</h4>
+            <p>Real rewards for participating, not for speculating.</p>
+            <p>Direct burn based on activity, not manual intervention.</p>
+            <p>Access to features based on merit (holding, usage, participation).</p>
+            <p class="final-statement"><strong>AlgoForge on Solana is speed, efficiency, and scalability.</strong></p>
+        </div>
+    </div>
+</section>
