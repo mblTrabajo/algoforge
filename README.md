@@ -33,9 +33,10 @@
 ## 🌐 Página del Proyecto
 
 🎉 **Sitio Web Online:**  
-[![Visitar AlgoForge](https://algoforgeapp.com)
+[🔗 Visitar AlgoForge](https://algoforgeapp.com)
 
 ---
+
 
 ## 🧩 Tecnologías en uso
 
