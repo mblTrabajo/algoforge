@@ -33,7 +33,7 @@
 ## 🌐 Página del Proyecto
 
 🎉 **Sitio Web Online:**  
-[![Visitar AlgoForge](https://img.shields.io/badge/🌍%20Ir%20a%20la%20Web-%20Click%20Aquí%20💻-brightgreen?style=for-the-badge)](https://mbltrabajo.github.io/algoforge/)
+[![Visitar AlgoForge](https://algoforgeapp.com)
 
 ---
 
